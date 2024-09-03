@@ -9,16 +9,16 @@
 #define MIN_ULOG 10
 
 typedef struct {
-	int stanjeRacuna;
-	int ulog;
-	int najveciDobitak;
+    int stanjeRacuna;
+    int ulog;
+    int najveciDobitak;
 } Racun;
 
 typedef struct {
-	char simbol;
-	int dobitakZa3;
-	int dobitakZa4;
-	int dobitakZa5;
+    char simbol;
+    int dobitakZa3;
+    int dobitakZa4;
+    int dobitakZa5;
 } SimbolDobitak;
 
 void ispisiIzbornik();
@@ -29,5 +29,9 @@ void prikaziStanje(const Racun* racun);
 int izracunajDobitak(char matrica[REDCI][STUPCI]);
 void ucitajStanje(Racun* racun);
 void spremiStanje(const Racun* racun);
+void spremiSortiraneDobitke();
+void obrisiDatotekuDobitaka();
+void quickSort(int* array, int low, int high);
+int partition(int* array, int low, int high);
 
 #endif // FUNKCIJE_H
